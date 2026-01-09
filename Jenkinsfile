@@ -73,7 +73,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                dir('java-app') {
+                dir('.') {
                     sh '''
                         docker build -t ${DOCKER_IMAGE}:${BUILD_NUMBER} .
                         docker tag ${DOCKER_IMAGE}:${BUILD_NUMBER} ${DOCKER_IMAGE}:latest
