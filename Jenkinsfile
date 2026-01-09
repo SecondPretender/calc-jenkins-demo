@@ -18,6 +18,17 @@ pipeline {
                 sh 'ls -la'
             }
         }
+
+        stage("Build"){
+            steps{
+                dir("."){
+                    sh "mvn clean compile -B"
+
+                }
+
+            }
+
+        }
     }
 
 
