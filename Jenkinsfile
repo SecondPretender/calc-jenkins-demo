@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-
+     environment {
+        APP_NAME = "Calc-App"
+     }
 
     stages{
         stage('Initialize'){
