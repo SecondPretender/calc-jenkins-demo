@@ -50,7 +50,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'target/app-1.0-SNAPSHOT.jar', fingerprint: true
+                    archiveArtifacts artifacts: 'target/training1_9-1.0-SNAPSHOT.jar', fingerprint: true
                 }
             }
         }
