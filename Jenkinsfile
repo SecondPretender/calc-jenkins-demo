@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+/*
     environment{
 
 
@@ -9,6 +10,7 @@ pipeline {
 
     tools{
     }
+ */
 
     stages{
         stage('Initialize'){
