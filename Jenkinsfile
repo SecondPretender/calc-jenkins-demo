@@ -4,6 +4,7 @@ pipeline {
      environment {
         APP_NAME = "Calc-App"
         DOCKER_IMAGE = "demo_calc_jpl"
+        BUILD_DOCKER = true
      }
 
     stages{
