@@ -38,6 +38,13 @@ pipeline {
                 }
             }
         }
+
+        stage("Package"){
+            steps{
+                sh "./mvnw package -DskipTests- B"
+            }
+        }
+
     }
 
 
