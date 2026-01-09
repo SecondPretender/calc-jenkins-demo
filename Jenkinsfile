@@ -53,6 +53,22 @@ pipeline {
             }
         }
 
+        stage("Code Quality"){
+            parallel{
+                stage("Lint Check"){
+                    steps{
+                        echo "Running Linter"
+                    }
+
+                }
+                stage("Security Skin"){
+                    steps{
+                        echo "Running Security Scan"
+                    }
+                }
+            }
+        }
+
     }
 
 
