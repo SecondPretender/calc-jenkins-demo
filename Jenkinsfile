@@ -22,7 +22,7 @@ pipeline {
         stage("Build"){
             steps{
                 dir("."){
-                    sh "chmod -x mvnw"
+                    sh "chmod -x ./mvnw"
                     sh "./mvnw clean compile -B"
 
                 }
