@@ -24,11 +24,19 @@ pipeline {
                 dir("."){
                     sh "chmod -R 777 ./mvnw"
                     sh "./mvnw clean compile -B"
-
                 }
-
             }
+        }
 
+        stage("Test"){
+            steps{
+                sh "./mvnw test -B"
+            }
+            post{
+                always{
+                    junit 'java-app/target/surefire-reports/*.xml'
+                }
+            }
         }
     }
 
