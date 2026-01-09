@@ -44,6 +44,12 @@ pipeline {
                 dir("."){
                     sh "./mvnw package -DskipTests -B"
                 }
+
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'target/training1_9-1.0-SNAPSHOT.jar', fingerprint: true
+                }
             }
         }
 
