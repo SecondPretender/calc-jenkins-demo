@@ -11,11 +11,17 @@ pipeline {
     }
 
     stages{
-        stage(){
+        stage('Initialize'){
             steps{
+                echo "Application: ${APP_NAME}"
+                echo "Build Number: ${BUILD_NUMBER}"
             }
         }
-        stage(){
+        stage("Checkout"){
+            steps {
+                // checkout scm  // For Git-based projects
+                sh 'ls -la'
+            }
         }
     }
 
