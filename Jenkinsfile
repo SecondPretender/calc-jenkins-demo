@@ -77,6 +77,7 @@ pipeline {
         }
 
         stage('Build Docker Image') {
+        agent any
             steps {
                 dir('.') {
                     sh '''
